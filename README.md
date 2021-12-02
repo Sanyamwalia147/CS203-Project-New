@@ -6,12 +6,12 @@ CS203 Project Proposal : This file contains a doc file giving the idea of what t
 
 Project Submission Intermediate : Contains the intermediate submission of the project which includes the Modules used, Inputs and Output ports.
 
-CS203_project_design.v : this is a .v file which contains the verilog code of the design module of this project.
+module.v : this is a .v file which contains the verilog code of the design module of this project.
 
 CS203_project_design.txt : .txt file which contains the verilog code of the design module of this project.
 
-CS203_project_testbench.v : this is a .v file which contains the verilog code of the testbench of this project.
+testbench.v : this is a .v file which contains the verilog code of the testbench of this project.
 
-CS203_project_testbench.txt : .txt file which contains the verilog code of the testbench of this project.
+CS203_project_Testbench.txt : .txt file which contains the verilog code of the testbench of this project.
 
 Output.vcd : Output file generated after the testbench.
