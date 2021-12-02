@@ -19,6 +19,21 @@ module parking_system(
    number=4'b0000;
    fare=10'b0000000000;
   end
+	
+always @(posedge clk or posedge reset_n)
+   begin
+    if(reset_n)
+     begin
+      current_state = IDLE;
+      number=4'b0000;
+      fare=10'b0000000000;
+     end
+    else
+     begin
+      current_state = next_state;      
+     end
+   end	
+	
 //State Interconnections...
  always @(*)
    begin
