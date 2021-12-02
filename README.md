@@ -10,8 +10,8 @@ module.v : this is a .v file which contains the verilog code of the design modul
 
 CS203_project_design.txt : .txt file which contains the verilog code of the design module of this project.
 
-testbench.v : this is a .v file which contains the verilog code of the testbench of this project.
+Testbench.v : this is a .v file which contains the verilog code of the testbench of this project.
 
-CS203_project_Testbench.txt : .txt file which contains the verilog code of the testbench of this project.
+CS203_Project_Testbench.txt : .txt file which contains the verilog code of the testbench of this project.
 
-Output.vcd : Output file generated after the testbench.
+output.vcd : Output file generated after the testbench.
