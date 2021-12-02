@@ -1,5 +1,3 @@
-// Code your testbench here
-// or browse Examples
 
 `timescale 1ns / 1ps
 module tb_parking_system();
@@ -317,3 +315,4 @@ clk=1'b0;
     $dumpfile("output.vcd");
     $dumpvars;
   end
+endmodule
