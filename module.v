@@ -65,3 +65,47 @@ module parking_system(
      default: next_state = IDLE;
     endcase
    end
+//Description of States
+ always @(posedge clk) 
+   begin 
+     case(current_state)
+ 	 IDLE: 
+     begin
+ 	  green_tmp = 1'b0;
+ 	  red_tmp = 1'b0;
+ 	  state = 3'b000; 
+       fare = fare + (number*(4'b1010));
+     end
+     WAIT_PASSWORD: 
+     begin
+	  green_tmp = 1'b0;
+	  red_tmp = 1'b1;
+	  state = 3'b001;
+       fare = fare + (number*(4'b1010));
+     end
+	 WRONG_PASS: 
+     begin
+	  green_tmp = 1'b0;
+	  red_tmp = ~red_tmp;
+	  state = 3'b010;  
+       fare = fare + (number*(4'b1010));
+	 end
+	 RIGHT_PASS: 
+     begin
+	  green_tmp = 1'b1;
+	  red_tmp = 1'b0;
+	  state = 3'b011;
+      number = number+4'b0001;
+       fare = fare + (number*(4'b1010));
+	 end
+     STOP: 
+     begin
+	  green_tmp = 1'b0;
+	  red_tmp = 1'b1;
+	  state = 3'b100; 
+      fare = fare + (number*(4'b1010));
+     end
+   endcase
+ end
+ assign RED_LED = red_tmp;
+ assign GREEN_LED = green_tmp;
