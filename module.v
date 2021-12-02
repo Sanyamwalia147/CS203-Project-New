@@ -124,3 +124,4 @@ always @(posedge clk or posedge reset_n)
  end
  assign RED_LED = red_tmp;
  assign GREEN_LED = green_tmp;
+endmodule
